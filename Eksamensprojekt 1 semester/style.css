@@ -1,0 +1,458 @@
+/*Styling*/
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'arial', bold;
+    background-color: #ffffff;
+}
+a {
+    text-decoration: none;
+}
+/*styles*/
+.forsidefooter{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.icons{
+    width: 60px;
+    }
+
+.icons-logo{
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    height: 70px; /* Adjust as needed */
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/*Top nav*/
+header{
+   flex: center;
+   justify-content: center;
+    display: flex;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header ul{
+    display: flex;
+    gap: 1vw;
+}
+
+header ul li{
+    display: flex;
+    
+    
+}
+
+header ul li.sidste{
+    margin-right: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+header ul li a{
+padding: 10px 10px;
+text-decoration: none;
+color: black;
+flex-direction: column;
+z-index: 1000;
+font-size: 7vw;
+padding: 2vw 1vw;
+justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: large;
+font-weight:300;
+}
+
+/*Dropdown*/
+
+header ul li a:hover{
+    color: black;
+    border-radius: 20vw;
+ 
+ }
+ 
+ header ul li ul.dropdown li{
+     display: flex;
+     
+ }
+ 
+ 
+ header ul li ul.dropdown{
+     
+     position: absolute;
+     z-index: 999;
+     display: none;
+     overflow: hidden;
+     
+ }
+ 
+ 
+ ul li:hover ul.dropdown{
+     display: flex;
+     flex-direction: column;
+     border-radius:0vw 0vw 3vw 3vw;
+ }
+ 
+ /*burgermenu*/
+ .dropdown_menu{
+     display: none;
+     position: absolute;
+     right: 0vw;
+     top: max(30vw);
+     height: 0px;
+     width: 25vw;
+     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     overflow: hidden;
+ 
+ }
+ 
+ .burgerlist{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding-top: 3vw 3vw;
+     gap: 0px;
+    
+ }
+ 
+ .dropdown_menu ul li a{
+     padding:0.5vw 0.5vw;
+     width: 100%;
+     text-align: center;
+     color: rgb(0, 0, 0);
+
+ }
+ 
+ .dropdown_menu ul li{
+     display: flex;
+     width: 100%;
+    
+ }
+ 
+ .dropdown_menu.open{
+     height: 25vw;
+     overflow: visible;
+   }
+ 
+   .toggle_btn {
+     position: absolute;
+     right: 30px;
+     color: black;
+     font-size: 1.5em;
+     cursor: pointer;
+     display: none;
+   }
+ 
+   /*Dropdown burger*/
+ 
+   .dropdown_menu ul li a:hover{
+     color: #A682D9;
+  }
+  
+  .dropdown_menu ul li ul.dropdown li{
+      display: flex;
+      width: auto;
+  }
+  
+  
+  .dropdown_menu ul li .dropdown{
+      
+      position: absolute;
+      right: 20vw;
+      z-index: 1001;
+      display: none;
+     
+      /*overflow: hidden;*/
+      
+  }
+  
+  .dropdown_menu ul li:hover ul.dropdown{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius:10px 0px 10px 10px;
+      overflow: hidden;
+      padding: 1vw 1vw;
+  }
+
+
+/*-----media queries----*/
+@media screen and (max-width: 600px){
+  
+    .navbar li{
+      display: none;
+    }
+  
+    .toggle_btn{
+      display: block;
+      
+    }
+  
+    .dropdown_menu{
+      display: block;
+    }
+
+    .hide{
+        display: none;
+    }
+
+  }
+
+
+/*forside*/
+
+.forside{
+    display: flex;
+    width: 70%;
+    margin: 40px 15vw 10px ;
+
+
+}
+
+h1{
+    text-align: center;
+    color: #A88CDB;
+    font-size: 60px;
+    font-weight: 900;
+    @media (max-width: 600px) {
+  
+            font-size: 35px; /* Adjust the font size for smaller screens */
+        }
+}
+
+/*forsidebilleder*/
+
+.image-pc {
+    display: block; /* Display on larger screens (default) */
+    width: 100%;
+   
+}
+
+.image-mobile {
+    display: none; /* Hide on larger screens (default) */
+    width: 100%;
+    max-width: 600px;
+}
+
+.image-sogk {
+    width: 700px;
+    height: 200px;
+
+}
+
+/* Media query for screens 600px or smaller (typical mobile screens) */
+@media (max-width: 600px) {
+    .image-pc {
+        display: none; /* Hide on smaller screens */
+    }
+
+    .image-mobile {
+        display: block; /* Display on smaller screens */
+    }
+}
+           
+footer {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .social-icons a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  .contact-info {
+    margin-top: 20px;
+  }
+
+  .contact-info p {
+    margin: 10px 0;
+    font-size: 10px;
+  }
+
+/*underside 1, inspiration*/
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.container2 {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    
+}
+
+.container2 img{
+    max-width: 33%;
+    height: auto;
+    display: block;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container2 img {
+        max-width: 100%; 
+    }
+}
+
+.overskrift2{
+font-size: 20px;
+color: rgb(39, 39, 39);
+text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .overskrift2 {
+        font-size: 20px;  
+    }
+}
+
+.overskrift3{
+    font-size: 20px;
+    color: rgb(39, 39, 39);
+    text-align: center;
+    }
+    
+    @media screen and (max-width: 500px) {
+        .overskrift3 {
+            font-size: 20px;  
+        }
+    }
+
+.overskrift4{
+        font-size: 15px;
+        color: rgb(39, 39, 39);
+        text-align: center;
+        }
+        
+        @media screen and (max-width: 500px) {
+            .overskrift3 {
+                font-size: 20px;  
+            }
+        }
+
+body {
+    font-family: 'ayfair Display', sans-serif;
+}
+  
+  h1, h2, h3 {
+    font-family: 'ayfair Display', sans-serif;
+   
+}
+
+.responsive-image {
+    max-width: 100%;  /* Billedet vil aldrig være bredere end dets container */
+    height: auto;  /* Billedet justerer automatisk højden for at bevare proportionerne */
+    display: block;  /* Fjerner eventuel overskydende plads under billedet */
+    margin: 0 auto;  /* Centrerer billedet inden for dets container */
+}
+
+
+.billed-container {
+    display: flex;
+    justify-content: space-between; /* Placerer elementerne med lige mellemrum mellem dem */
+    margin-bottom: 20px; /* Juster efter behov for at skabe mellemrum mellem top og bund */
+  }
+  
+.top-container,
+.bottom-container {
+    width: 100%; /* Sørg for at containerne bruger hele bredden */
+}
+  
+/* Mobil First CSS */
+.billed-container {
+    display: flex;
+    flex-direction: column; /* Stabel billeder i kolonner på små skærme */
+    margin-bottom: 20px;
+}
+  
+  @media (min-width: 768px) {
+    /* Tilpas layoutet til større skærme */
+    .billed-container {
+      flex-direction: row; /* Placer billeder ved siden af hinanden på større skærme */
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 60%; /* Juster dette tal for at ændre bredden af videocontaineren */
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .container {
+        right: 10; /* Ændrer positionen til venstre på mindre skærme */
+    }
+}
+
+
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; 
+}
+
+
+.scroll-content {
+    height: 200vh; 
+}
+
+/* Baggrundsfarve for brugermenu */
+.brugermenu {
+    background-color: #e6e6e6; 
+}
+
+/* Dropdown menu baggrundsfarve */
+.dropdown_menu {
+    background-color: #e6e6e6; 
+    border-radius: 20px; /* Juster dette tal for at ændre afrundningen af kanterne */
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>TrøjborgBryg</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+ <!--logo-->
+ <br> <br>
+ <div class="icons-logo">
+ <img class="icons" src="Logo2.png" alt="Description of the image">
+ <a href="index.html">
+     <h1>TrøjborgBryg</h1>
+ </a>
+ <img class="icons" src="søg&kruv.png" alt="Description of the image">
+</div>
+
+    <a href="index.html">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="styl.css">
+        
+    </a>
+</div>
+
+<!--top navigation-->
+<Header>
+    <nav>
+    <ul>
+        <li class="hide"><a href="Øl.html">Vores øl</a>
+            <ul class="dropdown">
+                <li><a href="Øl.html">Vores øl</a>
+                    </ul>
+        
+<li class="hide"><a href="Gavesæt.html"> Vores gavesæt</a>
+<ul class="dropdown">
+    <li><a href="Gavesæt.html">Vores gavesæt</a>
+        </ul>
+
+<li class="hide"><a href="TrøjborgBryghus.html">Et rigtigt bryghus</a>
+    <ul class="dropdown">
+        <li><a href="TrøjborgBryghus.html">Et rigtigt bryghus</a>
+            </ul>
+       
+</ul>
+<div class="toggle_btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+<!--start burgermenu-->
+<div class="dropdown_menu">
+    <ul class="burgerlist">
+
+<li><a href="Øl.html">Øl</a>
+        <ul class="dropdown">
+    </ul>
+        
+<li><a href="Gavesæt.html">Gavesæt</a>
+        <ul class="dropdown">
+     </ul>
+
+<li><a href="TrøjborgBryghus.html">Bryghus</a>
+        <ul class="dropdown">
+    </ul>
+</div>
+
+</nav>
+</Header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+        toggleBtn.onclick = function (){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+    
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+    
+        }
+    </script>
+    <br>
+    <br>
+   <!--Middle-->
+
+<p class="overskrift2">
+    "Udforsk vores unikke udvalg af alkoholfrie specialøl, der byder på friske og forfriskende oplevelser på flaske - naturligvis."
+</p>
+
+   <div class="billed-container top-container">
+    <img src="bøl.png" alt="Billede 1">
+    <img src="løl.png" alt="Billede 2">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</div>
+  
+  <div class="billed-container bottom-container">
+    <img src="gøl.png" alt="Billede 3">
+    <img src="røl.png" alt="Billede 4">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </div>
+  
+<!-- footter -->
+
+<footer>
+    <ul class="social-icons">
+      <li><a href="" target="_blank">Instagram</a></li>
+      <li><a href="" target="_blank">TikTok</a></li>
+      <li><a href="" target="_blank">Facebook</a></li>
+    </ul>
+
+    <div class="contact-info">
+      <p>Webshop telefon: 21 32 94 22</p>
+      <p>Webshop mail: shop@TrøjborgBryg.com</p>
+    </div>
+  </footer>
+
+</body>
+</html>
